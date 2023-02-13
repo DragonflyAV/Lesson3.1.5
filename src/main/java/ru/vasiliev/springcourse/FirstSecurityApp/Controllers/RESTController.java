@@ -36,7 +36,7 @@ public class RESTController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @PatchMapping("/update")
+    @PatchMapping()
     public User update(@RequestBody User user) {
         userService.update(user);
         return userService.findOne(user.getId());

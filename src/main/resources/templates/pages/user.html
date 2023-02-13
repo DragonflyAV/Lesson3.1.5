@@ -22,6 +22,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../../static/showAll.js" th:src="@{/showAll.js}"></script>
 </head>
 
 <body class="bg-light h-100" style="margin-top:60px">
@@ -93,25 +95,7 @@
                                             <th>Role</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <a th:text="${user.getId()}">ID</a>
-                                            </td>
-                                            <td>
-                                                <a th:text="${user.getUsername()}">Name</a>
-                                            </td>
-                                            <td>
-                                                <a th:text="${user.getAge()}">Age</a>
-                                            </td>
-                                            <td>
-                                                <a th:text="${user.getEmail()}">Email</a>
-                                            </td>
-                                            <td>
-                                                <a th:text="${user.getStringRoles()}">Role</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+                                        <tbody id="dataUser"></tbody>
                                     </table>
                                 </div>
                             </div>
