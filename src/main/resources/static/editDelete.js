@@ -72,7 +72,7 @@ on(document, 'click', '.btnDelete', e => {
     const row = e.target.parentNode.parentNode
     idFormDEL = row.firstElementChild.innerHTML
     $('#deleteModal').modal("show")
-    fetch(url + idForm, {
+    fetch(url + idFormDEL, {
         method: 'GET'
     })
         .then(response => response.json())

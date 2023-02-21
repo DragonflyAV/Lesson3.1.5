@@ -7,6 +7,7 @@ import ru.vasiliev.springcourse.FirstSecurityApp.models.User;
 import ru.vasiliev.springcourse.FirstSecurityApp.repositories.UserRepository;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -37,7 +38,7 @@ public class UserService {
 
     @Transactional
     public void update(User updateUser) {
-        if (updateUser.getPassword() == null) {
+        if (Objects.equals(updateUser.getPassword(), "")) {
             updateUser.setPassword(findOne(updateUser.getId()).getPassword());
         } else {
             updateUser.setPassword(passwordEncoder.encode(updateUser.getPassword()));
